@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.11.9)  9 NOV 2026 21:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.11.9)  9 NOV 2026 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1315,11 +1315,11 @@ Ch\uhorn \ohorn ng 2.
 [7
 
 ] [8] [9] [10] [11] [12]
-<images/image2.png, id=327, 455.301pt x 587.358pt>
+<images/image2.png, id=327, 1806.75pt x 2328.7pt>
 File: images/image2.png Graphic file (type png)
 <use images/image2.png>
 Package pdftex.def Info: images/image2.png  used on input line 772.
-(pdftex.def)             Requested size: 400.61703pt x 516.83183pt.
+(pdftex.def)             Requested size: 400.61703pt x 516.33083pt.
  [13] [14 <./images/image2.png>]
 Underfull \hbox (badness 2809) in paragraph at lines 791--791
 []|\T5/lmr/bx/n/12 Vai trá th nh
@@ -1406,7 +1406,7 @@ b><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.p
 fb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.
 pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12
 .pfb>
-Output written on main.pdf (31 pages, 891537 bytes).
+Output written on main.pdf (31 pages, 1306342 bytes).
 PDF statistics:
  446 PDF objects out of 1000 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)
