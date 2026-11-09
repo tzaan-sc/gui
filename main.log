@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.11.9)  9 NOV 2026 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.11.9)  9 NOV 2026 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1255,54 +1255,54 @@ been already used, duplicate ignored
 l.179 \end{titlepage}
                       [1] [1
 
-] [2] [3
+] [2
+
+] [3
 
 ] [4
 
-] [5
-
-] (main.toc [6
+] (main.toc [5
 
 ])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
 []|\T5/lmr/bx/n/12 Tø vi¸t
  []
 
-[8
+[7
 
 ] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [9
+ [8
 
 ]
 
 Package hyperref Warning: Glyph not defined in PU encoding,
-(hyperref)                removing `\h' on input line 334.
+(hyperref)                removing `\h' on input line 330.
 
 (main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [10
+ [9
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.356 \newpage
+l.352 \newpage
                [1
 
 ]
 Ch\uhorn \ohorn ng 1.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-79.
+75.
 (C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2
@@ -1315,52 +1315,52 @@ Ch\uhorn \ohorn ng 2.
 [7
 
 ] [8] [9] [10] [11] [12]
-<images/image2.png, id=331, 455.301pt x 587.358pt>
+<images/image2.png, id=327, 455.301pt x 587.358pt>
 File: images/image2.png Graphic file (type png)
 <use images/image2.png>
-Package pdftex.def Info: images/image2.png  used on input line 771.
+Package pdftex.def Info: images/image2.png  used on input line 772.
 (pdftex.def)             Requested size: 400.61703pt x 516.83183pt.
  [13] [14 <./images/image2.png>]
-Underfull \hbox (badness 2809) in paragraph at lines 790--790
+Underfull \hbox (badness 2809) in paragraph at lines 791--791
 []|\T5/lmr/bx/n/12 Vai trá th nh
  []
 
 LaTeX Font Info:    Trying to load font information for T5+lmtt on input line 7
-92.
+93.
 (C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex/latex/lm\t5lmtt.fd
 File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 2409) in paragraph at lines 794--794
+Underfull \hbox (badness 2409) in paragraph at lines 795--795
 []|\T5/lmr/m/n/12 M u thanh ^^_i·u
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 796--796
+Underfull \hbox (badness 2020) in paragraph at lines 797--797
 []|\T5/lmr/m/n/12 Möc ^^_i·u h÷îng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--800
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []|\T5/lmr/m/n/12 M u chú ch½nh
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 802--802
+Underfull \hbox (badness 10000) in paragraph at lines 803--803
 []|\T5/lmr/m/n/12 M u chú phö
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 804--804
+Underfull \hbox (badness 10000) in paragraph at lines 805--805
 []|\T5/lmr/m/n/12 Th nh cæng /
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 831--831
+Underfull \hbox (badness 10000) in paragraph at lines 832--832
 []|\T5/lmr/bx/n/12 K½ch th÷îc
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--837
+Underfull \hbox (badness 10000) in paragraph at lines 838--838
 []|\T5/lmr/m/n/12 Tablet Por-trait
  []
 
@@ -1370,13 +1370,13 @@ Ch\uhorn \ohorn ng 3.
 [18
 
 ] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 891--892
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
 []\T5/lmr/m/n/12 Figma, ``Overview: In-tro-duc-tion to De-sign Sys-tems,'' Figm
 a Learn.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--892
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
 \T5/lmr/m/n/12 [On-line]. Avail-able: [][]$\T5/lmtt/m/n/12 https : / / help . f
 igma . com / hc / en-[]us / articles /
  []
@@ -1392,9 +1392,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B1093714D658A80CFDCE740B10EEAD1A;6645.
  ) 
 Here is how much of TeX's memory you used:
- 24625 strings out of 467871
- 459513 string characters out of 5417892
- 894293 words of memory out of 5000000
+ 24624 strings out of 467871
+ 459507 string characters out of 5417892
+ 888292 words of memory out of 5000000
  53002 multiletter control sequences out of 15000+600000
  715264 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1406,9 +1406,9 @@ b><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.p
 fb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.
 pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12
 .pfb>
-Output written on main.pdf (32 pages, 892582 bytes).
+Output written on main.pdf (31 pages, 891537 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
+ 446 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
  303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

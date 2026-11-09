@@ -1,11 +1,11 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {chapter}{Nhận xét của giảng viên hướng dẫn}{i}{chapter*.1}%
-\contentsline {chapter}{Lời cam đoan}{iii}{chapter*.2}%
-\contentsline {chapter}{Lời cảm ơn}{iv}{chapter*.3}%
-\contentsline {chapter}{Tóm tắt}{v}{chapter*.4}%
-\contentsline {chapter}{Danh mục các từ viết tắt và thuật ngữ}{viii}{chapter*.6}%
-\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{ix}{table.0.1}%
-\contentsline {chapter}{Danh s\'ach b\h {a}ng}{x}{chapter*.7}%
+\contentsline {chapter}{Lời cam đoan}{ii}{chapter*.2}%
+\contentsline {chapter}{Lời cảm ơn}{iii}{chapter*.3}%
+\contentsline {chapter}{Tóm tắt}{iv}{chapter*.4}%
+\contentsline {chapter}{Danh mục các từ viết tắt và thuật ngữ}{vii}{chapter*.6}%
+\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{viii}{table.0.1}%
+\contentsline {chapter}{Danh s\'ach b\h {a}ng}{ix}{chapter*.7}%
 \contentsline {chapter}{Lời mở đầu}{1}{chapter*.9}%
 \contentsline {chapter}{\numberline {1}GIỚI THIỆU TỔNG QUAN}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Lý do chọn đề tài}{2}{section.1.1}%
