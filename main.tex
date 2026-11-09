@@ -21,11 +21,11 @@
 \fi
 
 % --- ĐỊNH DẠNG TRANG VÀ LỀ THEO CHUẨN ĐỒ ÁN / LUẬN VĂN ---
-\usepackage[a4paper,top=25mm,bottom=25mm,left=30mm,right=20mm]{geometry}
+\usepackage[a4paper,top=25mm,bottom=25mm,left=30mm,right=20mm,headheight=28pt,headsep=12pt]{geometry}
 \usepackage{setspace}
 \onehalfspacing
-\setlength{\parindent}{1cm}
-\setlength{\parskip}{4pt}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
 
 % --- CÁC GÓI BỔ TRỢ HÌNH ẢNH, BẢNG BIỂU, MÀU SẮC ---
 \usepackage{graphicx}
@@ -60,37 +60,68 @@
 % Lệnh tạo ô mẫu màu giao diện trực quan
 \newcommand{\colorsample}[1]{\fcolorbox{gray!60}{#1}{\rule{0pt}{2mm}\rule{10mm}{0pt}}}
 
-% --- ĐỊNH DẠNG TIÊU ĐỀ MỤC ---
+% --- ĐỊNH DẠNG TIÊU ĐỀ MỤC THEO QUY CHUẨN PRESET ---
+% Heading 1 (Tên chương): 16 pt, Bold, in hoa, căn giữa
 \titleformat{\chapter}[hang]
-  {\normalfont\bfseries\Large\centering}
+  {\normalfont\bfseries\fontsize{16pt}{20pt}\selectfont\centering}
   {CHƯƠNG \thechapter:}{0.5em}{\MakeUppercase}
-\titlespacing*{\chapter}{0pt}{10pt}{20pt}
+\titlespacing*{\chapter}{0pt}{0pt}{16pt}
 
+% Heading 2 (Tiêu đề mục cấp 1: 1.1, 2.1...): 14 pt, Bold, căn trái
 \titleformat{\section}
-  {\normalfont\bfseries\large}
+  {\normalfont\bfseries\fontsize{14pt}{18pt}\selectfont}
   {\thesection.}{0.5em}{}
-\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
 
+% Heading 3 (Tiêu đề mục cấp 2: 1.1.1, 2.1.1...): 13 pt, Bold, căn trái
 \titleformat{\subsection}
-  {\normalfont\bfseries\normalsize}
+  {\normalfont\bfseries\fontsize{13pt}{16pt}\selectfont}
   {\thesubsection.}{0.5em}{}
-\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
 
+% Tiêu đề mục cấp 3: 13 pt, Bold/Italic, căn trái
 \titleformat{\subsubsection}
-  {\normalfont\bfseries\itshape\normalsize}
+  {\normalfont\bfseries\itshape\fontsize{13pt}{16pt}\selectfont}
   {\thesubsubsection.}{0.5em}{}
-\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
 
-% --- ĐỊNH DẠNG TÊN DANH MỤC VÀ CHÚ THÍCH ---
+% --- ĐỊNH DẠNG TÊN DANH MỤC VÀ CHÚ THÍCH (12 PT, CENTER, BẢNG TRÊN, HÌNH DƯỚI) ---
 \renewcommand{\contentsname}{MỤC LỤC}
 \renewcommand{\listfigurename}{DANH MỤC HÌNH ẢNH}
 \renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}
-\captionsetup[table]{name=Bảng,labelsep=colon,justification=centering}
-\captionsetup[figure]{name=Hình,labelsep=colon,justification=centering}
+\captionsetup[table]{name=Bảng,labelsep=colon,justification=centering,font={normalsize,bf}}
+\captionsetup[figure]{name=Hình,labelsep=colon,justification=centering,font={normalsize,bf}}
 
 % --- CẤU HÌNH DANH SÁCH ---
 \setlist[itemize]{topsep=2pt,partopsep=0pt,itemsep=2pt,parsep=2pt,leftmargin=1.5cm}
 \setlist[enumerate]{topsep=2pt,partopsep=0pt,itemsep=2pt,parsep=2pt,leftmargin=1.5cm}
+
+% --- CẤU HÌNH TIÊU ĐỀ ĐẦU TRANG & CHÂN TRANG (FANCYHDR) THEO MẪU BÁO CÁO ĐỒ ÁN ---
+\usepackage{fancyhdr}
+\setlength{\headheight}{28pt}
+\setlength{\headsep}{12pt}
+
+% Định dạng hiển thị tên chương trên header: Chương X. TÊN CHƯƠNG
+\renewcommand{\chaptermark}[1]{%
+  \markboth{Chương \thechapter. \MakeUppercase{#1}}{}%
+}
+\renewcommand{\sectionmark}[1]{}
+
+% Kiểu trang cho phần đầu (không header, chỉ có số trang La Mã ở chân)
+\fancypagestyle{preliminary}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+% Mặc định plain cho các trang đầu ở phần tiền tài liệu
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
 
 \begin{document}
 
@@ -185,6 +216,7 @@
 % ==============================================================================
 \pagenumbering{roman}
 \setcounter{page}{1}
+\pagestyle{preliminary}
 
 % --- NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN ---
 \chapter*{NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN}
@@ -336,12 +368,34 @@ CSV & Comma-Separated Values -- Định dạng dữ liệu dạng văn bản ph�
 % ==============================================================================
 % NỘI DUNG CHÍNH (ĐÁNH SỐ Ả RẬP TỪ 1)
 % ==============================================================================
+\newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
+
+\fancypagestyle{fancy}{%
+  \fancyhf{}%
+  \fancyhead[L]{\parbox[b]{0.40\textwidth}{\raggedright\fontsize{10}{12}\selectfont\textit{Đồ án GUI -- Đánh giá Code và Trợ giảng Ảo}}}%
+  \fancyhead[R]{\parbox[b]{0.58\textwidth}{\raggedleft\fontsize{10}{12}\selectfont\nouppercase{\leftmark}}}%
+  \fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}%
+  \renewcommand{\headrulewidth}{0.5pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[L]{\parbox[b]{0.40\textwidth}{\raggedright\fontsize{10}{12}\selectfont\textit{Đồ án GUI -- Đánh giá Code và Trợ giảng Ảo}}}%
+  \fancyhead[R]{\parbox[b]{0.58\textwidth}{\raggedleft\fontsize{10}{12}\selectfont\nouppercase{\leftmark}}}%
+  \fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}%
+  \renewcommand{\headrulewidth}{0.5pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\pagestyle{fancy}
 
 % --- LỜI MỞ ĐẦU ---
 \chapter*{LỜI MỞ ĐẦU}
 \addcontentsline{toc}{chapter}{Lời mở đầu}
+\markboth{LỜI MỞ ĐẦU}{}
 
 Trong những năm gần đây, công nghệ thông tin ngày càng được ứng dụng rộng rãi trong lĩnh vực giáo dục, đặc biệt là hoạt động giảng dạy và học tập lập trình. Việc tổ chức bài tập, quản lý quá trình nộp bài và đánh giá kết quả học tập đòi hỏi nhiều thời gian cũng như công sức từ phía giảng viên. Đối với sinh viên, việc xác định nguyên nhân lỗi trong chương trình và tìm kiếm phương pháp khắc phục cũng là một trong những khó khăn thường gặp trong quá trình tự học.
 
@@ -606,15 +660,16 @@ Bảng~\ref{tab:phan_cong} thể hiện chi tiết phân công công việc và 
   \item Quản trị Nhật ký Hệ thống (System Logs \& Audit Trail): Tra cứu và theo dõi nhật ký hoạt động của Celery Queue, API Gateway, Docker Runner và kiểm tra truy vết an ninh hệ thống.
 \end{itemize}
 
+\newpage
+
 \section{Chân dung người dùng (User persona)}
 
 \subsection{User Persona -- Giáo viên}
 
-Bảng~\ref{tab:persona_gv} mô tả chân dung người dùng đại diện cho đối tượng Giáo viên.
 
-\begin{table}[htbp]
-\centering
-\caption{Chân dung người dùng -- Giáo viên\label{tab:persona_gv}}
+\begin{center}
+\captionof{table}{Chân dung người dùng -- Giáo viên\label{tab:persona_gv}}
+\vspace{4pt}
 \begin{tabular}{|>{\bfseries}p{3.2cm}|p{11.5cm}|}
 \hline
 Thông tin & Nội dung \\
@@ -636,15 +691,14 @@ Hành vi & Thường sử dụng máy tính để quản lý lớp, giao bài v�
 Mong muốn & Giao diện quản lý rõ ràng, dễ theo dõi bài nộp và hỗ trợ giảm thời gian chấm bài \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
 
 \subsection{User Persona -- Sinh viên}
 
-Bảng~\ref{tab:persona_sv} mô tả chân dung người dùng đại diện cho đối tượng Sinh viên.
 
-\begin{table}[htbp]
-\centering
-\caption{Chân dung người dùng -- Sinh viên\label{tab:persona_sv}}
+\begin{center}
+\captionof{table}{Chân dung người dùng -- Sinh viên\label{tab:persona_sv}}
+\vspace{4pt}
 \begin{tabular}{|>{\bfseries}p{3.2cm}|p{11.5cm}|}
 \hline
 Thông tin & Nội dung \\
@@ -666,15 +720,16 @@ Hành vi & Thường học trên laptop, làm bài vào buổi tối và tìm ki
 Mong muốn & Giao diện dễ sử dụng, kết quả rõ ràng và có AI giải thích lỗi, gợi ý cách sửa \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
+
+\newpage
 
 \subsection{User Persona -- Giáo vụ}
 
-Bảng~\ref{tab:persona_gvu} mô tả chân dung người dùng đại diện cho đối tượng Giáo vụ.
 
-\begin{table}[htbp]
-\centering
-\caption{Chân dung người dùng -- Giáo vụ\label{tab:persona_gvu}}
+\begin{center}
+\captionof{table}{Chân dung người dùng -- Giáo vụ\label{tab:persona_gvu}}
+\vspace{4pt}
 \begin{tabular}{|>{\bfseries}p{3.2cm}|p{11.5cm}|}
 \hline
 Thông tin & Nội dung \\
@@ -696,15 +751,14 @@ Hành vi & Thường xuyên sử dụng máy tính để cập nhật, tra cứu
 Mong muốn & Giao diện quản lý tập trung, dễ tìm kiếm, lọc và cập nhật thông tin \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
 
 \subsection{User Persona -- Quản trị viên}
 
-Bảng~\ref{tab:persona_qtv} mô tả chân dung người dùng đại diện cho đối tượng Quản trị viên.
 
-\begin{table}[htbp]
-\centering
-\caption{Chân dung người dùng -- Quản trị viên\label{tab:persona_qtv}}
+\begin{center}
+\captionof{table}{Chân dung người dùng -- Quản trị viên\label{tab:persona_qtv}}
+\vspace{4pt}
 \begin{tabular}{|>{\bfseries}p{3.2cm}|p{11.5cm}|}
 \hline
 Thông tin & Nội dung \\
@@ -726,15 +780,16 @@ Hành vi & Thường xuyên kiểm tra tài khoản, cập nhật thông tin và
 Mong muốn & Dashboard trực quan, thao tác nhanh và hệ thống phân quyền rõ ràng \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
+
+\newpage
 
 \subsection{User Persona -- Quản trị viên hệ thống}
 
-Bảng~\ref{tab:persona_sysadmin} mô tả chân dung người dùng đại diện cho đối tượng Quản trị viên hệ thống.
 
-\begin{table}[htbp]
-\centering
-\caption{Chân dung người dùng -- Quản trị viên hệ thống\label{tab:persona_sysadmin}}
+\begin{center}
+\captionof{table}{Chân dung người dùng -- Quản trị viên hệ thống\label{tab:persona_sysadmin}}
+\vspace{4pt}
 \begin{tabular}{|>{\bfseries}p{3.2cm}|p{11.5cm}|}
 \hline
 Thông tin & Nội dung \\
@@ -756,7 +811,7 @@ Hành vi & Thường xuyên kiểm tra trạng thái hệ thống, log và các 
 Mong muốn & Giao diện quản trị tập trung, trạng thái hệ thống trực quan và dễ phát hiện sự cố \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
 
 \newpage
 
@@ -764,11 +819,10 @@ Mong muốn & Giao diện quản trị tập trung, trạng thái hệ thống t
 
 Sơ đồ tổng quan hệ thống (Hình~\ref{fig:so_do_tong_quan}) biểu diễn mối liên kết giữa năm nhóm người dùng chính và các luồng chức năng tương ứng trong nền tảng Đánh giá Code và Trợ giảng Ảo.
 
-\begin{figure}[htbp]
-  \centering
+\begin{center}
   \includegraphics[width=0.88\textwidth]{image2.png}
-  \caption{Sơ đồ tổng quan hệ thống và các luồng chức năng chính\label{fig:so_do_tong_quan}}
-\end{figure}
+  \captionof{figure}{Sơ đồ tổng quan hệ thống và các luồng chức năng chính\label{fig:so_do_tong_quan}}
+\end{center}
 
 \newpage
 
@@ -780,9 +834,9 @@ Nhằm đảm bảo tính nhất quán giữa các phân hệ Giảng viên, Sin
 
 Hệ thống màu sắc trong tệp Figma được phân thành hai tầng: màu gốc (primitive tokens) và màu theo vai trò sử dụng (semantic tokens) nhằm tăng tính trực quan và khả năng mở rộng \cite{figmaDesignSystem}. Quy cách màu sắc chi tiết được trình bày trong Bảng~\ref{tab:mau_sac}.
 
-\begin{table}[htbp]
-\centering
-\caption{Các màu sắc chính trong hệ thống giao diện ETV\label{tab:mau_sac}}
+\begin{center}
+\captionof{table}{Các màu sắc chính trong hệ thống giao diện ETV\label{tab:mau_sac}}
+\vspace{4pt}
 \begin{tabular}{|p{3.3cm}|p{3.2cm}|p{7.5cm}|}
 \hline
 \textbf{Vai trò thành phần} & \textbf{Mã màu (HEX)} & \textbf{Quy cách và ngữ cảnh sử dụng thực tế} \\
@@ -802,7 +856,7 @@ Màu chữ phụ (muted) & \texttt{\#475569} \ \colorsample{etvMuted} & Tiêu đ
 Thành công / cảnh báo / lỗi & \texttt{\#16A34A} \ \colorsample{etvSuccess}\newline \texttt{\#D97706} \ \colorsample{etvWarning}\newline \texttt{\#DC2626} \ \colorsample{etvDanger} & Phân biệt các trạng thái thao tác (xanh lá: đang hoạt động, hoàn thành; vàng cam: cảnh báo hạn nộp; đỏ: đóng lớp, xóa, quá hạn) \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
 
 Về kiểu chữ, giao diện sử dụng phông chữ \textbf{Inter} cho các nội dung văn bản thông thường và \textbf{JetBrains Mono} cho các khối mã nguồn, màn hình Docker Sandbox. Các kiểu chữ được lưu thành Text Style trong Figma: tiêu đề trang chính dùng cỡ 30~px (Bold); tiêu đề mục và phân đoạn dùng cỡ \textbf{20 -- 24~px} (SemiBold); tiêu đề thẻ lớp dùng cỡ \textbf{18~px} (SemiBold); chữ nội dung bảng và mô tả dùng cỡ \textbf{14~px} (Regular); chữ trên nút bấm và nhãn nhập liệu dùng cỡ \textbf{14~px} (Medium/SemiBold); chữ chú thích phụ và thẻ tag dùng cỡ \textbf{12~px} (Regular); các dòng mã lập trình dùng cỡ \textbf{12 -- 14~px} với phông JetBrains Mono để đảm bảo các ký tự thẳng hàng, dễ đọc.
 
@@ -821,9 +875,10 @@ Các thành phần giao diện được đóng gói thành các Component và Co
 
 Để đảm bảo giao diện hiển thị đồng bộ, không bị tràn viền hay chồng lấn nội dung, toàn bộ các màn hình được xây dựng dựa trên hệ thống Auto-layout thích ứng theo 4 kích thước khung chuẩn được trình bày tại Bảng~\ref{tab:bo_cuc}.
 
-\begin{table}[htbp]
-\centering
-\caption{Quy cách bố cục giao diện ETV trên các kích thước màn hình\label{tab:bo_cuc}}
+\newpage
+\begin{center}
+\captionof{table}{Quy cách bố cục giao diện ETV trên các kích thước màn hình\label{tab:bo_cuc}}
+\vspace{4pt}
 \begin{tabular}{|p{3.3cm}|p{3.2cm}|p{7.5cm}|}
 \hline
 \textbf{Nền tảng thiết bị} & \textbf{Kích thước khung} & \textbf{Quy cách hiển thị lưới nội dung} \\
@@ -837,7 +892,7 @@ Tablet Portrait (TP) & 768 $\times$ 1024 px & Lưới thẻ 2 cột cân đối,
 Mobile (MOB) & 440 $\times$ 956 px & Dồn về 1 cột dọc duy nhất, mỗi thẻ rộng 100\% (408~px), lề hai bên 16~px, khoảng cách thẻ 16~px. \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
 
 Các quy tắc thích ứng bố cục chính bao gồm:
 \begin{itemize}
@@ -875,6 +930,7 @@ Trong tương lai, nhóm định hướng tiếp tục hoàn thiện thiết k�
 % ==============================================================================
 \begin{thebibliography}{99}
 \addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+\markboth{TÀI LIỆU THAM KHẢO}{}
 
 \bibitem{iso9241}
 International Organization for Standardization, \textit{ISO 9241-210:2019 -- Ergonomics of Human-System Interaction -- Part 210: Human-Centred Design for Interactive Systems}. Geneva, Switzerland: ISO, 2019. [Online]. Available: \url{https://www.iso.org/standard/77520.html}
