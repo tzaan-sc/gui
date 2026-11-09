@@ -6,7 +6,7 @@
   \usepackage[utf8]{inputenc}
   \usepackage[T5]{fontenc}
   \usepackage[vietnamese]{babel}
-  \usepackage{lmodern}
+  \renewcommand{\rmdefault}{ptm}
   \usepackage{newunicodechar}
   \newunicodechar{–}{--}
   \newunicodechar{—}{---}
@@ -382,8 +382,6 @@ Hệ thống hướng đến việc kết hợp giữa tự động hóa quá tr
 
 Đề tài tập trung vào khía cạnh phân tích và thiết kế giao diện, không triển khai các chức năng xử lý nghiệp vụ thực tế như thực thi mã nguồn, chấm điểm tự động, kết nối mô hình AI, quản lý cơ sở dữ liệu và xác thực tài khoản. Những chức năng này được thể hiện ở mức giao diện và mô phỏng tương tác trong prototype.
 
-\newpage
-
 \section{Phân công công việc}
 
 Bảng~\ref{tab:phan_cong} thể hiện chi tiết phân công công việc và đóng góp của từng thành viên trong quá trình thực hiện đồ án.
@@ -437,7 +435,6 @@ Bảng~\ref{tab:phan_cong} thể hiện chi tiết phân công công việc và 
 \cline{1-2}
 12 & Hoàn thiện các trạng thái giao diện như thông báo, hộp thoại xác nhận, trạng thái rỗng và trạng thái lỗi cho các màn hình phụ trách. & \tabularnewline
 \hline
-\pagebreak
 
 % --- NHÓM 2: NGUYỄN MINH THÙY ---
 \multicolumn{2}{|>{\raggedright\arraybackslash}p{\dimexpr 1.0cm+11.2cm+2\tabcolsep\relax}|}{\cellcolor{gray!20}\textbf{NHÓM CÔNG VIỆC: NGUYỄN MINH THÙY --- GIAO DIỆN SINH VIÊN (DESKTOP / TABLET / MOBILE)}} & \multirow{24}{*}{\textbf{50\%}} \tabularnewline
@@ -514,7 +511,7 @@ Bảng~\ref{tab:phan_cong} thể hiện chi tiết phân công công việc và 
 \noindent\textbf{Chức năng chính:}
 \begin{itemize}
   \item Quản lý ngân hàng bài tập (Tạo mới, chỉnh sửa, xóa, gắn nhãn chủ đề/độ khó/ngôn ngữ).
-  \item Quản lý bộ Test Cases (Sample, Public, Hidden; thiết lập Input/Output, giới hạn Time/RAM, trọng số điểm).
+  \item Quản lý bộ Test Cases (Sample, Public, Hidden; thiết lập Input/\allowbreak Output, giới hạn Time/\allowbreak RAM, trọng số điểm).
   \item Thiết lập và quản lý tiêu chí đánh giá (Rubric chấm điểm).
   \item Giao bài tập cho lớp học với thiết lập 1 mốc Deadline cứng duy nhất.
   \item Quản lý đóng/mở lớp học phụ trách và xem danh sách sinh viên trong lớp.
@@ -609,8 +606,6 @@ Bảng~\ref{tab:phan_cong} thể hiện chi tiết phân công công việc và 
   \item Quản trị Nhật ký Hệ thống (System Logs \& Audit Trail): Tra cứu và theo dõi nhật ký hoạt động của Celery Queue, API Gateway, Docker Runner và kiểm tra truy vết an ninh hệ thống.
 \end{itemize}
 
-\newpage
-
 \section{Chân dung người dùng (User persona)}
 
 \subsection{User Persona -- Giáo viên}
@@ -624,7 +619,7 @@ Bảng~\ref{tab:persona_gv} mô tả chân dung người dùng đại diện cho
 \hline
 Thông tin & Nội dung \\
 \hline
-Tên & Nguyễn Văn Minh \\
+Tên & Trần Minh Tuấn \\
 \hline
 Tuổi & 35 \\
 \hline
@@ -654,7 +649,7 @@ Bảng~\ref{tab:persona_sv} mô tả chân dung người dùng đại diện cho
 \hline
 Thông tin & Nội dung \\
 \hline
-Tên & Nguyễn Minh An \\
+Tên & Nguyễn Ngô Vân Thùy \\
 \hline
 Tuổi & 21 \\
 \hline
@@ -714,7 +709,7 @@ Bảng~\ref{tab:persona_qtv} mô tả chân dung người dùng đại diện ch
 \hline
 Thông tin & Nội dung \\
 \hline
-Tên & Lê Hoàng Nam \\
+Tên & Lê Đình Hùng \\
 \hline
 Tuổi & 32 \\
 \hline
